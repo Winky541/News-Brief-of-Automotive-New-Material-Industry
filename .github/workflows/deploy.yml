@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+# 将静态页面部署到 GitHub Pages
+# 触发时机：1) 推送到 main 分支；2) 手动 Run workflow
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 给 GITHUB_TOKEN 部署到 Pages 所需的权限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
