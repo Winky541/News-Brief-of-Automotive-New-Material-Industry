@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automotive Advanced Materials Daily Brief</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1>Automotive Advanced Materials Daily Brief</h1>
+      <p class="subtitle">汽车新材料行业日报 · 电池材料 / 轻量化 / 复合材料 / 超材料 / 创新材料</p>
+    </div>
+    <div class="header-meta">
+      <span>简报日期：<strong id="brief-date">加载中...</strong></span>
+      <span>&nbsp;|&nbsp;</span>
+      <span>生成时间：<strong id="generated-at">加载中...</strong></span>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <button class="nav-btn active" data-category="all">全部</button>
+      <button class="nav-btn" data-category="solid_state">电池材料</button>
+      <button class="nav-btn" data-category="lightweight">轻量化</button>
+      <button class="nav-btn" data-category="composite">复合材料</button>
+      <button class="nav-btn" data-category="metamaterial">超材料</button>
+      <button class="nav-btn" data-category="innovation">创新材料</button>
+    </div>
+  </nav>
+
+  <main class="main">
+    <section class="stats-section">
+      <div class="stat-card">
+        <div class="stat-value" id="stat-items">—</div>
+        <div class="stat-label">今日条目</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-companies">—</div>
+        <div class="stat-label">涉及公司</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="stat-density">—</div>
+        <div class="stat-label">最高能量密度 Wh/kg</div>
+      </div>
+    </section>
+
+    <section class="trend-section">
+      <h2 class="section-title">行业动态概览</h2>
+      <p id="trend-content" class="trend-content">加载中...</p>
+    </section>
+
+    <section class="news-section">
+      <h2 class="section-title">热点新闻（按影响力排序）</h2>
+      <div id="news-list" class="news-list">
+        <div class="loading">加载中，请稍候...</div>
+      </div>
+    </section>
+
+    <section class="archive-section">
+      <h2 class="section-title">历史归档</h2>
+      <div id="archive-list" class="archive-list">
+        <div class="loading">加载中，请稍候...</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Automotive Advanced Materials Research · 数据来源：企业官网 / 行业媒体 / 学术期刊 · 自动生成，仅供参考</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
